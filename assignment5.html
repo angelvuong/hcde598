@@ -14,53 +14,55 @@
         <div class="header">
             <h1>Assignment 5: Subtractive Fabrication and CNC Milling</h1>
             <p>
-            <img src="img_1275.jpg" width=600></a>
+            <img src="IMG_1329.JPG" width=600></a>
             </p>
             <p>
-            This project continues to explore screen block patterns through 3D printing and lasercutting.<br><br>
+            For this week's project I learned subtractive fabrication and CNC milling using the Othermill. The goal of this project was to design a box with joining methods. I broke away from the screen block theme from previous projects but retrospectively realized that I could have easily milled out a screen block pattern to continue the theme. <br><br>
             Materials and Tools: <br>
-            C flute cardboard<br>
-            PLA filament<br>
-            Rhino<br>
-            <a href="https://www.amazon.com/Simple-Deluxe-Extension-Hanging-Included/dp/B01LFYVW7O">Hanging Lamp Cord</a>
+            4 FR1 boards<br>
+            High-strength double sided tape<br>
+            1/32" Flat End Mill<br>
+            Makercase<br>
+            KiCad<br>
+            Bantam Tools software<br>
             <br>
 
             <h3>Step 1. Designing the Box</h3>
-            <p>I created the design using Makercase. When we were tasked with this assignment, I was excited that I would be able to apply my ongoing theme into the project. The vision for my lamp shade came immediately: a rectangular prism with breeze block patterns laser cut from the panels. With the lampshade design in mind, I brainstormed different ways to incorporate a 3D printed connector piece. Would this piece hold up the hanging pendant lamp? Would it hold pieces of cardboard in place? Ultimately, I designed a 6x6" cross-shaped lampshade fitting that would fit on the base of the pendant lamp and would serve as the cardboard connector.<br>
+            <p>I created the box design using Makercase and exported my design as a DXF file. I pondered designing the shape in OnShape but wanted to revisit another tool.<br>
+              Makercase is a straightforward tool that I was introduced to in our first assignment. I'm glad that I got to revisit this nifty tool for the assignment because it did not meet my needs for Assignment 1. I set the box at 2"x2"x1", closed, with finger edge joints (finger size .472"). My intention for designing a small box was so that I could have extra FR1 boards in case I should encounter any milling errors. I did not worry about the material thickness beause I only needed a surface pattern of my 3D model.<br>
               <br>
-              I designed the connector in Rhino and test printed the design at 220°. <br>
+              <img src="makercase.jpg" width=800></a><br>
+             <br>
+            Next, I imported my DXF file into KiCad as a "board outline" and exported the outline as a Gerber file.<br>
               <br>
-              <img src="SS1.jpg" width=800></a><br><br>
-              When I retrieved my print, I was disappointed to find a phyllo dough-like, flaky mess of a result:<br>
+              Finally, I imported the Gerber file into the Bantam Tools software to mill. On the first run, I set up incorrect placement values for my material. I set the width, height, and thickness to the FR1 board size instead of setting the Z value = zoffset. Uh oh! After configuring the Bantam Tools settings and attaching the 1/32" Flat End Mill, I sticky taped an FR1 board (to be cut) to another board ("the sacrifice") and taped it slightly jutting off the base of the Othermill to be cut. Here's where I made a grave mistake! While I am not sure if I cut *into* the mill (I hope not), the Z setting was set so that both FR1 boards were milled at the same time. I did not know this was happening while the mill was active, but it makes sense in retrospect... there was so much FR1 swarf! The only pro to this mistake was that I ended up with the two (front and back) faces that I needed for the box. Removing the individual box components was a pain because the boards were so tightly sandwiched together.
+               <br>
+                <img src="IMG_1325.JPG" width=600></a><br><br>
               <br>
-                <img src="img_1204_1024.jpg" width=400></a>
-              <br><br>
-              I was concerned that my design caused the printing error but was determined to try again! Joshua supported me through the second print process and ensured that there were no errors in my design. When I ran the second print with the same printer settings, I was surprised to see wavy, reptile-skin-like folds on the printed surface.
-              With Joshua's permission (I wasn't trying to hog the printers!), I test printed two different filaments at 230° and found that the increase in temperature made the print much smoother. Each print took roughly 2.5 hours to complete. <br>
+              I returned the following day to mill the side box pieces. This time, I adjusted the settings according to Joshua's presentation deck: X (127mm), Y (101.60mm), Z (1.46mm) and placement at X (12mm), Y (4mm), and Z (1.52mm). To prevent an accumulation of FR1 dust, I attached the bit fan. Voila! Quick fixes! My second attempt with milling was successful. The mill only cut through one FR1 layer and the swarf was cleared out of the way.<br>
               <br>
-              <img src="img_1241.jpg" width=400></a><br><br>
+              <img src="IMG_1328.JPG" width=600></a>
+              <br>
             <h3>Step 2. CNC Milling</h3>
-            The lampshade design and print process went very smoothly. I designed the shade pattern in Rhino. <br><br>
+            On the first run, I set up incorrect placement values for my material. I set the width, height, and thickness to the FR1 board size instead of setting the Z value = zoffset. Uh oh! After configuring the Bantam Tools settings and attaching the 1/32" Flat End Mill, I sticky taped an FR1 board (to be cut) to another board ("the sacrifice") and taped it slightly jutting off the base of the Othermill to be cut. Here's where I made a grave mistake! While I am not sure if I cut *into* the mill (I hope not), the Z setting was set so that both FR1 boards were milled at the same time. I did not know this was happening while the mill was active, but it makes sense in retrospect... there was so much FR1 swarf! The only pro to this mistake was that I ended up with the two (front and back) faces that I needed for the box. Removing the individual box components was a pain because the boards were so tightly sandwiched together.
+             <br>
+            <img src="IMG_1325.JPG" width=600></a><br><br>
             <br>
-            <img src="SS2.jpg" width=800></a><br>
+            I returned the following day to mill the side box pieces. This time, I adjusted the settings according to Joshua's presentation deck: X (127mm), Y (101.60mm), Z (1.46mm) and placement at X (12mm), Y (4mm), and Z (1.52mm). To prevent an accumulation of FR1 dust, I attached the bit fan. Voila! Quick fixes! My second attempt with milling was successful. The mill only cut through one FR1 layer and the swarf was cleared out of the way.<br>
             <br>
-            The shade is a 10x23" rectangle with a straight line etching every 6." Folded up, the rectangle forms a rectangular prism. The decorative faces of the lamp have the Empress screen pattern cut out.
-            <br><br>
-            <b>Iteration 1</b> (Etch: 7% power, 15% speed | Cut: 27% power, 10% speed) The base retangle measures 10x23" with connector slots measuring 1" wide and .25" long. Success!<br>
-            <br>
-            <img src="img_1284.jpg" width=400></a><br>
-            <br>
+            <img src="IMG_1328.JPG" width=600></a>
             <h3>Step 3. Assembly</h3>
-            With the success of both 3D and laser cut prints, assembly came very easily. I attached the 3D printed connector piece to the lamp cord, connected the attachment to interior of the rectangular prism, and voila! The box is held together by the connector and does not come apart with a light shaking.<br>
+            Assembly was a snap! (Literally and figuratively.) I attached the faces of the milled FR1 boards together to make this very cute, very shiny little box. Perhaps I will use this box for storing tiny things.<br>
             <br>
-            <img src="img_1275.jpg" width=400></a><br>
+            <img src="IMG_1353.GIF" width=400></a><br>
             <br>
             <br>
-            **Download the Rhino files for the <a href="https://www.dropbox.com/s/9wzrlm2vfxyzgdd/LampPattern.3dm?dl=0">lamp shade</a> or the <a href="https://www.dropbox.com/s/9wzrlm2vfxyzgdd/LampPattern.3dm?dl=0">cord connector</a> if you'd like to create your own cardboard breeze block lamp!<br>
+            **Download the DXF files <a href="https://www.dropbox.com/s/zzfo1xbpy8mqrs3/box%20%281%29.dxf?dl=0">here</a> if you'd like to create your own tiny coppery box!<br>
             <br>
             Collaborators:<br>
             Lucas Sexton - review of OnShape<br>
             Jami Odell - Helped with settings for Bantam Tools<br>
+            Joshua Vasquez - for the perfect Othermill settings!<br>
             </p>
         </div>
 
